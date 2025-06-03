@@ -60,7 +60,6 @@ void MainWindows::updateCountdown() {
         QMessageBox::information(this, "提示", "倒计时结束！");
         player->play();
     }
-
 }
 
 void MainWindows::on_quxiao_clicked() {

@@ -34,7 +34,7 @@ private:
     Ui::TaskDialog *ui;
     int rowMax;
     int idx;//焦点
-    bool doCellClicked;
+    bool doCellClicked;//有无点击某一行
     QString renwumiaoshu;
     QString time;
     QString renwuming;
