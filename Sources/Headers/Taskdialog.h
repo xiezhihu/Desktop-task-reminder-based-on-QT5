@@ -24,7 +24,7 @@ public:
 
     ~TaskDialog() override;
 signals:
-    void taskConfirmed(const QString &renwuming, const QString &renwumiaoshu, const QString &time);
+    void taskConfirmed(const QString &renwuming, const QString &renwumiaoshu, const QString &time);//发送信号
 private slots:
     void on_biaoge_cellClicked(int row,int column);
     void on_queren_clicked();

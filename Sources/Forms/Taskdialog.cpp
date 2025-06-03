@@ -14,8 +14,6 @@ TaskDialog::TaskDialog(QWidget *parent) :
     idx=-1;
 
     setbiaoge();
-//    connect(ui->shanchurenwu,&QPushButton::clicked,this,TaskDialog::on_shanchurenwu_clicked);
-
 }
 
 TaskDialog::~TaskDialog() {
