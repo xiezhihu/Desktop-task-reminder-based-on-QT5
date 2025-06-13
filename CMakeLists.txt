@@ -8,8 +8,15 @@ set(CMAKE_AUTOUIC ON)
 
 
 set(CMAKE_PREFIX_PATH "D:/Qt/5.15.2/msvc2019_64")#告诉 CMake 在该路径下查找 Qt 库和其他依赖项。
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+# 设置源码与执行时字符集为 UTF-8（GCC/Clang）
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -finput-charset=UTF-8 -fexec-charset=UTF-8")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -finput-charset=UTF-8 -fexec-charset=UTF-8")
+
+# 针对 MSVC 设置 UTF-8 源码处理
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
+
 # 引入自定义的 .cmake 文件,用于自动复制dll
 include(${PROJECT_SOURCE_DIR}/cmake/QtRuntimeUtils.cmake)
 set(MyUIForms  ${PROJECT_SOURCE_DIR}/Sources/Forms)
