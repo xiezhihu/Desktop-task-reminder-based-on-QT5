@@ -9,6 +9,5 @@ int main(int argc, char *argv[]) {
     MainWindows mainWindows;
     mainWindows.show();
 
-
     return QApplication::exec();
 }
